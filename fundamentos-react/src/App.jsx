@@ -4,6 +4,7 @@ import ComParametro from './components/basics/ComParametro';
 import RandomNumber from './components/basics/Aleatorio';
 import Card from './components/layout/Card';
 import Familia from './components/basics/Familia';
+import FamiliaMembro from './components/basics/FamiliaMembro';
 import './App.css';
 
 const App = (props) => (
@@ -11,7 +12,11 @@ const App = (props) => (
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
 			<Card titulo="#04 - Componente com Filhos" color="#355C7D">
-				<Familia sobrenome="Ferreira" />
+				<Familia sobrenome="Ferreira" >
+					<FamiliaMembro nome="Pedro" />
+      		<FamiliaMembro nome="Ana" />
+      		<FamiliaMembro nome="Gustavo" />
+				</Familia>
 			</Card>
 
 			<Card titulo="#03 - Desafio Aleatório" color="#6C5B7B">
