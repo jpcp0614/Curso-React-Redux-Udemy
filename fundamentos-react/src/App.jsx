@@ -9,15 +9,15 @@ const App = () => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
-			<Card titulo="Desafio Aleatório">
+			<Card titulo="Desafio Aleatório" color="#355C7D">
 				<RandomNumber min={ 1 } max={ 20 } />
 			</Card>
 
-			<Card titulo="Primeiro">
+			<Card titulo="Primeiro" color="#6C5B7B">
 				<Primeiro />
 			</Card>
 
-			<Card titulo="Com Parâmetro">
+			<Card titulo="Com Parâmetro" color="#C06C84">
 				<ComParametro titulo='Situação do aluno' aluno='João' nota={7.9} />
 			</Card>
 		</div>
