@@ -1,15 +1,12 @@
 import ReactDom from 'react-dom';
 import React from 'react';
 import './index.css'; // import relativo
+import Primeiro from './components/basics/Primeiro';
 
 const el = document.getElementById('root');
 
-const tag = <strong>Hello World!!!</strong>
-
 ReactDom.render(
   <div>
-    { tag }
+    <Primeiro />
   </div>,
 el);
-
-//ReactDom.render('Olá React!!!', document.getElementById('root'));
