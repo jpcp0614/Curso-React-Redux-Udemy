@@ -8,12 +8,12 @@ import ComParametro from './components/basics/ComParametro';
 const el = document.getElementById('root');
 
 ReactDom.render(
-  <div id="app">
+  <>
     <Primeiro />
     <ComParametro
       titulo="Situação do aluno"
       aluno="João"
       nota={ 7.9 }
     />
-  </div>,
+  </>,
 el);
