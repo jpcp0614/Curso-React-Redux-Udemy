@@ -6,12 +6,18 @@ import RandomNumber from './components/basics/Aleatorio';
 import Familia from './components/basics/Familia';
 import FamiliaMembro from './components/basics/FamiliaMembro';
 import ListaAlunos from'./components/repetition/ListaAlunos';
+import TabelaProdutos from'./components/repetition/TabelaProdutos';
 import './App.css';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
+
+			<Card titulo="#06 - Tabela de Produtos" color="#F8B195">
+				<TabelaProdutos />
+			</Card>
+
 			<Card titulo="#05 - Lista de Alunos" color="#152633">
 				<ListaAlunos />
 			</Card>
