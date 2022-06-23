@@ -18,9 +18,9 @@ const App = (props) => (
 
 			<Card titulo="#07 - Renderização Condicional" color="#F67280">
 				<ParOuImpar numero={ 8 }/>
-				<UserInfo usuario={{ nome: 'Fernando' }}/>
+				<UserInfo />
 				{/* <UserInfo usuario={{ email: 'fernando@email.com' }}/> */}
-				<UserInfo usuario={{}}/>
+				{/* <UserInfo usuario={{}}/> */}
 			</Card>
 
 			<Card titulo="#06 - Tabela de Produtos" color="#F8B195">
