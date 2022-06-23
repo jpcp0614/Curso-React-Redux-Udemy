@@ -11,24 +11,29 @@ import './App.css';
 import ParOuImpar from './components/conditional/ParOuImpar';
 import UserInfo from './components/conditional/UsuarioInfo';
 import DiretaPai from './components/communication/DiretaPai';
+import IndiretaPai from './components/communication/IndiretaPai';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
 
-			<Card titulo="#08 - Comunicação Direta" color="#C06C84">
+			<Card titulo="#09 - Comunicação Indireta" color="#355C7D">
+				<IndiretaPai />
+			</Card>
+
+			<Card titulo="#08 - Comunicação Direta" color="#6C5B7B">
 				<DiretaPai />
 			</Card>
 
-			<Card titulo="#07 - Renderização Condicional" color="#F67280">
+			<Card titulo="#07 - Renderização Condicional" color="#C06C84">
 				<ParOuImpar numero={ 8 }/>
 				<UserInfo />
 				{/* <UserInfo usuario={{ email: 'fernando@email.com' }}/> */}
 				{/* <UserInfo usuario={{}}/> */}
 			</Card>
 
-			<Card titulo="#06 - Tabela de Produtos" color="#F8B195">
+			<Card titulo="#06 - Tabela de Produtos" color="#F67280">
 				<TabelaProdutos />
 			</Card>
 
@@ -48,7 +53,7 @@ const App = (props) => (
 				<RandomNumber min={ 1 } max={ 20 } />
 			</Card>
 
-			<Card titulo="#02 - Primeiro" color="#C06C84 ">
+			<Card titulo="#02 - Primeiro" color="#C06C84">
 				<Primeiro />
 			</Card>
 
