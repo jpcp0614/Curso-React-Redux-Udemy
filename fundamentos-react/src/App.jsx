@@ -1,16 +1,21 @@
 import React from 'react';
-import Primeiro from './components/basics/Primeiro';
-import ComParametro from './components/basics/ComParametro';
-import RandomNumber from './components/basics/Aleatorio';
 import Card from './components/layout/Card';
+import ComParametro from './components/basics/ComParametro';
+import Primeiro from './components/basics/Primeiro';
+import RandomNumber from './components/basics/Aleatorio';
 import Familia from './components/basics/Familia';
 import FamiliaMembro from './components/basics/FamiliaMembro';
+import ListaAlunos from'./components/repetition/ListaAlunos';
 import './App.css';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
+			<Card titulo="#05 - Lista de Alunos" color="#152633">
+				<ListaAlunos />
+			</Card>
+
 			<Card titulo="#04 - Componente com Filhos" color="#355C7D">
 				<Familia sobrenome="Ferreira" >
 					<FamiliaMembro nome="Pedro" />
