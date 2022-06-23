@@ -41,6 +41,14 @@ class Calculator extends Component {
 
     // digito o valor, a flag clearDisplay deve ser false
     this.setState({ displayValue, clearDisplay: false });
+
+    if (n !== '.') {
+      const i = this.state.current;
+      const newValue = parseFloat(displayValue);
+      const values = [...this.state.values];
+      values[i] = newValue;
+      this.setState({ values });
+    }
   }
 
   render () {
