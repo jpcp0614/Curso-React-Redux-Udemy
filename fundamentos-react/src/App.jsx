@@ -8,11 +8,16 @@ import FamiliaMembro from './components/basics/FamiliaMembro';
 import ListaAlunos from'./components/repetition/ListaAlunos';
 import TabelaProdutos from'./components/repetition/TabelaProdutos';
 import './App.css';
+import ParOuImpar from './components/conditional/ParOuImpar';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
+
+			<Card titulo="#07 - Renderização Condicional" color="#F67280">
+				<ParOuImpar numero={ 8 }/>
+			</Card>
 
 			<Card titulo="#06 - Tabela de Produtos" color="#F8B195">
 				<TabelaProdutos />
