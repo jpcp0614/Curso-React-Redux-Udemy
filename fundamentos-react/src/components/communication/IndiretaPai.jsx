@@ -1,22 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IndiretaFilho from './IndiretaFilho';
 
 const IndiretaPai =(props) => {
-  let nome = '?';
-  let idade = 0;
-  let isNerd = false;
+  const [nome, setNome] = useState('?');
+  const [idade, setIdade] = useState(0);
+  const [isNerd, setIsNerd] = useState(false);
 
-  const fornecerInfos = (nomeParam, idadeParam, isNerdParam) => {
-    nome = nomeParam;
-    idade = idadeParam;
-    isNerd = isNerdParam;
-
-    console.log(nomeParam, idadeParam, isNerdParam);
+  const fornecerInfos = (nome, idade, isNerd) => {
+    setNome(nome);
+    setIdade(idade);
+    setIsNerd(isNerd);
   }
 
   return (
     <div>
-      <div>Pai</div>
       <span>{ nome } </span>
       <span><strong>{ idade } </strong></span>
       <span>{ isNerd ? 'Verdadeiro' : 'Falso' }</span>
