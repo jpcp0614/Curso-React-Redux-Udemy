@@ -1,0 +1,15 @@
+.Circulo .Content {
+  align-items: center;
+  display: flex;
+  background-color: #07103a;
+  border-radius: 50%;
+  justify-content: center;
+  height: 50px;
+  font-size: 18px;
+  margin: 5px;
+  color:aliceblue;
+}
+
+.Circulo {
+  display: flex;
+}

@@ -14,11 +14,16 @@ import DiretaPai from './components/communication/DiretaPai';
 import IndiretaPai from './components/communication/IndiretaPai';
 import Forms from './components/forms/Input';
 import Contador from './components/counter/Contador';
+import MegaSena from './components/mega/Mega';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
+
+			<Card titulo="#12 - Desafio" color="#0567A8">
+				<MegaSena />
+			</Card>
 
 			<Card titulo="#11 - Contador" color="#A8E6CE">
 				<Contador numeroInicial={ 10 }/>

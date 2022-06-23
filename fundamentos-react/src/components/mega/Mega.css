@@ -1,0 +1,22 @@
+.Mega button {
+  border: none;
+  border-radius: 2px;
+  background:rgb(86, 149, 195);
+  font-size: 15px;
+  margin: 5px;
+  height: 40px;
+  width: 200px;
+}
+
+.Mega button:hover {
+  background: rgb(24, 74, 110);
+}
+
+.Mega input {
+  font-size: 18px;
+  width: 100px;
+}
+
+.Mega label {
+  font-size: 18px;
+}
