@@ -4,10 +4,20 @@ import './Calculator.css';
 import Button from '../components/Button';
 import Display from '../components/Display';
 
+const initialState = {
+  displayValue: '0',
+  clearDisplay: false,
+  operation: null,
+  values: [0, 0],
+  current: 0
+}
+
 class Calculator extends Component {
 
+  state = { ...initialState }
+
   clearMemory = () => {
-    console.log('limpar')
+    this.setState({ ...initialState });
   }
 
   setOperation = (operation) => {
@@ -15,16 +25,32 @@ class Calculator extends Component {
   }
 
   addDigit = (n) => {
-    console.log(n)
+    // usar o ponto somente uma vez
+    if (n === '.' && this.state.displayValue.includes('.')) {
+      return;
+    }
+
+    // limpar quando tiver 0 no display ou clearDisplay estiver true
+    const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay;
+
+    // se o display está limpo ou não
+    const currentValue = clearDisplay ? '' : this.state.displayValue;
+
+    // novo valor que será colocado no display
+    const displayValue = currentValue + n;
+
+    // digito o valor, a flag clearDisplay deve ser false
+    this.setState({ displayValue, clearDisplay: false });
   }
 
   render () {
 
     const { clearMemory, setOperation, addDigit } = this;
+    const { displayValue } = this.state;
 
     return (
       <div className="calculator">
-        <Display value={ 100 }/>
+        <Display value={ displayValue }/>
         <Button label="AC" click={ clearMemory } triple/>
         <Button label="/" click={ setOperation } operation/>
         <Button label="7" click={ addDigit }/>
