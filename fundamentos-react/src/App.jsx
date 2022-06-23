@@ -9,6 +9,7 @@ import ListaAlunos from'./components/repetition/ListaAlunos';
 import TabelaProdutos from'./components/repetition/TabelaProdutos';
 import './App.css';
 import ParOuImpar from './components/conditional/ParOuImpar';
+import UserInfo from './components/conditional/UsuarioInfo';
 
 const App = (props) => (
 	<div className="App">
@@ -17,6 +18,9 @@ const App = (props) => (
 
 			<Card titulo="#07 - Renderização Condicional" color="#F67280">
 				<ParOuImpar numero={ 8 }/>
+				<UserInfo usuario={{ nome: 'Fernando' }}/>
+				{/* <UserInfo usuario={{ email: 'fernando@email.com' }}/> */}
+				<UserInfo usuario={{}}/>
 			</Card>
 
 			<Card titulo="#06 - Tabela de Produtos" color="#F8B195">
