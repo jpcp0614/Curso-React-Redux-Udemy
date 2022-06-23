@@ -13,32 +13,37 @@ import UserInfo from './components/conditional/UsuarioInfo';
 import DiretaPai from './components/communication/DiretaPai';
 import IndiretaPai from './components/communication/IndiretaPai';
 import Forms from './components/forms/Input';
+import Contador from './components/counter/Contador';
 
 const App = (props) => (
 	<div className="App">
 		<h1>Fundamentos React</h1>
 		<div className="Cards">
 
-			<Card titulo="#10 - Componente Controlado" color="#152633">
+			<Card titulo="#11 - Contador" color="#A8E6CE">
+				<Contador numeroInicial={ 10 }/>
+			</Card>
+
+			<Card titulo="#10 - Componente Controlado" color="#2A363B">
 				<Forms />
 			</Card>
 
-			<Card titulo="#09 - Comunicação Indireta" color="#355C7D">
+			<Card titulo="#09 - Comunicação Indireta" color="#E84A5F">
 				<IndiretaPai />
 			</Card>
 
-			<Card titulo="#08 - Comunicação Direta" color="#6C5B7B">
+			<Card titulo="#08 - Comunicação Direta" color="#FF847C">
 				<DiretaPai />
 			</Card>
 
-			<Card titulo="#07 - Renderização Condicional" color="#C06C84">
+			<Card titulo="#07 - Renderização Condicional" color="#FECEAB">
 				<ParOuImpar numero={ 8 }/>
 				<UserInfo />
 				{/* <UserInfo usuario={{ email: 'fernando@email.com' }}/> */}
 				{/* <UserInfo usuario={{}}/> */}
 			</Card>
 
-			<Card titulo="#06 - Tabela de Produtos" color="#F67280">
+			<Card titulo="#06 - Tabela de Produtos" color="#99B898">
 				<TabelaProdutos />
 			</Card>
 
