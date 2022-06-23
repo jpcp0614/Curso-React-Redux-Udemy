@@ -1,0 +1,18 @@
+.Counter button {
+  border: none;
+  border-radius: 2px;
+  background:rgb(86, 149, 195);
+  font-size: 20px;
+  margin: 5px;
+  height: 30px;
+  width: 100px;
+}
+
+.Counter button:hover {
+  background: rgb(24, 74, 110);
+}
+
+.Counter input {
+  font-size: 18px;
+  width: 100px;
+}
