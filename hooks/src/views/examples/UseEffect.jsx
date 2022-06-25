@@ -18,8 +18,8 @@ const UseEffect = (props) => {
 	//*TODO ↑ dependência para que o valor seja chamado (quando o valor for alterado, a função será chamada)
 
 	useEffect(() => {
-		if (factorial > 100000000) document.getElementsByClassName('text')[0].style.color = 'blue';
-		return () => document.getElementsByClassName('text')[0].style.color = 'black';
+		if (factorial > 100000000) document.title = 'Eita';
+		return () => document.title = 'React Hooks';
 	}, [factorial]);
 
 
@@ -27,8 +27,11 @@ const UseEffect = (props) => {
 	const [status, setStatus] = useState('Impar');
 
 	useEffect(() => {
-		if (number < 0) setStatus('Não existe');
-		return () => setStatus(number % 2 !== 0 ? 'Par' : 'Impar');
+		if (number < 0) {
+			setStatus('Negativo');
+		} else {
+			setStatus(number % 2 === 0 ? 'Par' : 'Impar');
+		}
 	}, [number]);
 
 	return (
