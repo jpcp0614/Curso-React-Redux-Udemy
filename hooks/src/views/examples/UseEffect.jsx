@@ -5,9 +5,9 @@ import calcFactorial from '../../utils/calcFactorial';
 
 const UseEffect = (props) => {
 
+	//* EXERCÍCIO 01
 	const [number, setNumber] = useState(1);
 	const [factorial, setFactorial] = useState(1);
-
 
 	//* Sempre que entro no componente e altero um estado diretamente, ele renderizará novamente
 	//* Por isso, gero um efeito colateral também no valor do fatorial
@@ -21,6 +21,15 @@ const UseEffect = (props) => {
 		if (factorial > 100000000) document.getElementsByClassName('text')[0].style.color = 'blue';
 		return () => document.getElementsByClassName('text')[0].style.color = 'black';
 	}, [factorial]);
+
+
+	//* EXERCÍCIO 02
+	const [status, setStatus] = useState('Impar');
+
+	useEffect(() => {
+		if (number < 0) setStatus('Não existe');
+		return () => setStatus(number % 2 !== 0 ? 'Par' : 'Impar');
+	}, [number]);
 
 	return (
 		<div className='UseEffect'>
@@ -42,6 +51,14 @@ const UseEffect = (props) => {
 				value={ number }
 				onChange={ (e) => setNumber(e.target.value) }
 			/>
+
+			<SectionTitle title="Exercício #04"/>
+
+			<div>
+				<span className="text">Status: </span>
+				<span className="text red">{ status }</span>
+			</div>
+
 		</div>
 	);
 };
